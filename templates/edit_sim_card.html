@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit SIM Card</title>
+</head>
+<body>
+    <h1>Редактировать SIM-карту</h1>
+    <form method="POST" action="{{ url_for('edit_sim_card', id=sim_card.id) }}">
+        <label for="number">Номер:</label>
+        <input type="text" name="number" value="{{ sim_card.number }}" required>
+        <br>
+        <label for="operator">Оператор:</label>
+        <input type="text" name="operator" value="{{ sim_card.operator }}" required>
+        <br>
+        <label for="comment">Комментарий:</label>
+        <input type="text" name="comment" value="{{ sim_card.comment }}">
+        <br>
+        <button type="submit">Обновить SIM-карту</button>
+    </form>
+</body>
+</html>

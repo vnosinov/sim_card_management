@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add SIM Card</title>
+</head>
+<body>
+    <h1>Добавить SIM-карту</h1>
+    <form method="POST" action="{{ url_for('add_sim_card') }}">
+        <label for="number">Номер:</label>
+        <input type="text" name="number" required>
+        <br>
+        <label for="operator">Оператор:</label>
+        <input type="text" name="operator" required>
+        <br>
+        <label for="comment">Комментарий:</label>
+        <input type="text" name="comment">
+        <br>
+        <button type="submit">Добавить SIM-карту</button>
+    </form>
+</body>
+</html>
